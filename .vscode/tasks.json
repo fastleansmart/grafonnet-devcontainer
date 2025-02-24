@@ -1,0 +1,23 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558 
+    // See https://code.visualstudio.com/docs/editor/tasks-appendix
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "File Watcher",
+            "type": "process",
+            "command": "./.devcontainer/scripts/getGrafanaToken.sh",
+            "isBackground": true, // removes the infinite spinner
+            "problemMatcher": [],
+            "presentation": {
+                "group": "main_tasks",
+                "reveal": "always",
+                "panel": "new",
+                "echo": false, // silence "Executing task ..."
+            },
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        },
+    ]
+}
